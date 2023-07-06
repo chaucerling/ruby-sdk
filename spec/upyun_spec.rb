@@ -67,7 +67,7 @@ describe "Upyun Restful API Basic testing" do
       end
 
       it "then get the encoded path should also success" do
-        expect(@upyun.get(URI.encode(@path_cn))).to eq(@str)
+        expect(@upyun.get(URI.encode_www_form_component(@path_cn))).to eq(@str)
       end
 
       it "after all, delete should success" do
